@@ -4,3 +4,8 @@
   line-height: 1.5;
   font-weight: 400;
 }
+
+@theme {
+  --color-burgundy: #58131B;
+  --color-rose-white: #FAF7F8;
+}
