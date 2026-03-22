@@ -2,8 +2,6 @@ import * as React from "react";
 import { cva, type VariantProps } from 'class-variance-authority'
 import { classNames } from '../styling'
 
-
-
 export const typographyStyles = cva('font-medium', {
     variants: {
         variant: {
@@ -27,7 +25,7 @@ export const typographyStyles = cva('font-medium', {
         },
     },
     defaultVariants: {
-        variant: 'burgundy',
+        variant: 'teal',
         size: 'md',
     }
 });

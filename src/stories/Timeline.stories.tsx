@@ -1,6 +1,6 @@
 import { Timeline } from './Timeline';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import TeaIcon from './Icons/TeaIcon';
+import TeaIcon from '../Icons/TeaIcon';
 
 const meta = {
   title: 'Example/Timeline',
