@@ -1,11 +1,11 @@
+import { cva, type VariantProps } from 'class-variance-authority';
 import * as React from "react";
-import { cva, type VariantProps } from 'class-variance-authority'
-import { classNames } from '../styling'
+import { classNames } from '../styling';
 
 export const headingStyles = cva('font-bold', {
     variants: {
         color: {
-            burgundy: 'text-burgundy',
+            burgundy: 'text-burgundy-950',
             teal: 'text-teal-950',
             white: 'text-rose-white',
         },
