@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Button } from './Button';
 import './header.css';
 
@@ -9,12 +7,12 @@ type User = {
 
 export interface HeaderProps {
   user?: User;
-  onLogin?: () => void;
-  onLogout?: () => void;
-  onCreateAccount?: () => void;
+  // onLogin?: () => void;
+  // onLogout?: () => void;
+  // onCreateAccount?: () => void;
 }
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
+export const Header = ({ user}: HeaderProps) => (
   <header>
     <div className="storybook-header">
       <div>
@@ -42,12 +40,12 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
             <span className="welcome">
               Welcome, <b>{user.name}</b>!
             </span>
-            <Button size="small" onClick={onLogout} label="Log out" />
+            <Button variant="primary" size="sm">Logout</Button>
           </>
         ) : (
           <>
-            <Button size="small" onClick={onLogin} label="Log in" />
-            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
+            <Button variant="secondary" size="sm">Login</Button>
+            <Button variant="primary" size="sm">Sign up</Button>
           </>
         )}
       </div>

@@ -4,3 +4,12 @@
   line-height: 1.5;
   font-weight: 400;
 }
+
+@theme {
+  --color-burgundy-950: #58131B;
+  --color-burgundy-700: #8D3741;
+  --color-burgundy-600: #9F5961;
+  --color-burgundy-200: #C9B2B5;
+  --color-burgundy-100: #F4ECED;
+  --color-rose-white: #FAF7F8;
+}
