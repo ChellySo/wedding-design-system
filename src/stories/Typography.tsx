@@ -54,7 +54,7 @@ export interface TypographyProps
     /**
      * Color variant of the typography.
      *
-     * @default "burgundy"
+     * @default "teal"
      */
     variant?: TypographyVariants['variant']
 
