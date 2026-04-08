@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from 'class-variance-authority';
-import * as React from "react";
+import { forwardRef } from 'react';
 import { classNames } from '../styling';
 
 export const typographyStyles = cva('font-medium', {
@@ -76,7 +76,7 @@ export interface TypographyProps
     children: React.ReactNode
 }
 
-export const Typography = React.forwardRef<HTMLElement, TypographyProps>(({ as: Component = 'p', variant, size, className, children, ...props }, ref) => {
+export const Typography = forwardRef<HTMLElement, TypographyProps>(({ as: Component = 'p', variant, size, className, children, ...props }, ref) => {
 
     return (
         <Component

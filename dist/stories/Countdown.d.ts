@@ -1,6 +1,5 @@
-import * as React from "react";
 export interface CountdownProps {
     weddingDate: string | number | Date;
     className?: string;
 }
-export declare const Countdown: React.ForwardRefExoticComponent<CountdownProps & React.RefAttributes<HTMLDivElement>>;
+export declare const Countdown: import("react").ForwardRefExoticComponent<CountdownProps & import("react").RefAttributes<HTMLDivElement>>;

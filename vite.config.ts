@@ -16,15 +16,29 @@ export default defineConfig({
   build: {
     emptyOutDir: false,
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: {
+        index: path.resolve(__dirname, 'src/index.ts'),
+        styles: path.resolve(__dirname, 'src/styles.ts'),
+      },
       name: 'WeddingDesignSystem',
       formats: ['es', 'cjs'],
-      fileName: (format) =>
-        format === 'es' ? 'index.es.js' : 'index.cjs',
+      fileName: (format, entryName) => {
+        if (entryName === 'index') {
+          return format === 'es' ? 'index.es.js' : 'index.cjs';
+        }
+        if (entryName === 'styles') {
+          return 'styles.js';
+        }
+        return 'file.js';
+      },
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
         assetFileNames: 'styles.css',
       },
     },

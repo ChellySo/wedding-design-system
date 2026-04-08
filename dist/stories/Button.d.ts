@@ -1,5 +1,4 @@
 import { type VariantProps } from 'class-variance-authority';
-import * as React from "react";
 export declare const buttonStyles: (props?: ({
     variant?: "primary" | "secondary" | "tertiary" | null | undefined;
     size?: "sm" | "md" | "lg" | "xl" | null | undefined;
@@ -22,4 +21,4 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'>, Butt
     children: React.ReactNode;
 }
 /** Primary UI component for user interaction */
-export declare const Button: React.ForwardRefExoticComponent<Omit<ButtonProps, "ref"> & React.RefAttributes<HTMLButtonElement>>;
+export declare const Button: import("react").ForwardRefExoticComponent<Omit<ButtonProps, "ref"> & import("react").RefAttributes<HTMLButtonElement>>;

@@ -1,4 +1,4 @@
-import * as React from "react";
+import { forwardRef, useState, useEffect } from 'react';
 import { Typography } from "./Typography";
 import { classNames } from '../styling';
 
@@ -8,7 +8,7 @@ export interface CountdownProps {
     className?: string;
 }
 
-export const Countdown = React.forwardRef<HTMLDivElement, CountdownProps>(({ weddingDate, className, ...props }, ref) => {
+export const Countdown = forwardRef<HTMLDivElement, CountdownProps>(({ weddingDate, className, ...props }, ref) => {
     const calculateTimeLeft = () => {
         const currentDate = new Date()
         const newDate = new Date(weddingDate)
@@ -24,9 +24,9 @@ export const Countdown = React.forwardRef<HTMLDivElement, CountdownProps>(({ wed
         return { days, hours, minutes, seconds }
     };
 
-    const [timeLeft, setTimeLeft] = React.useState(calculateTimeLeft())
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
 
-    React.useEffect(() => {
+    useEffect(() => {
         const interval = setInterval(() => {
             setTimeLeft(calculateTimeLeft())
         }, 1000)

@@ -1,5 +1,4 @@
 import { type VariantProps } from 'class-variance-authority';
-import * as React from "react";
 export declare const headingStyles: (props?: ({
     color?: "burgundy" | "teal" | "white" | null | undefined;
     size?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | null | undefined;
@@ -12,4 +11,4 @@ export interface HeadingProps extends Omit<React.ComponentPropsWithRef<'h1'>, 'c
     className?: string;
     as?: React.ElementType;
 }
-export declare const Heading: React.ForwardRefExoticComponent<Omit<HeadingProps, "ref"> & React.RefAttributes<HTMLElement>>;
+export declare const Heading: import("react").ForwardRefExoticComponent<Omit<HeadingProps, "ref"> & import("react").RefAttributes<HTMLElement>>;
