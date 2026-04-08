@@ -1,4 +1,4 @@
-import * as React from "react";
+import { forwardRef } from 'react';
 import HeartWithTimelineIcon from "../Icons/HeartIcon"
 import { Typography } from "../stories/Typography"
 import { classNames } from "../styling"
@@ -12,7 +12,7 @@ export interface TimelineProps {
     heartIcon?: boolean
 }
 
-export const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(({ className, title, text, heartIcon, icon }, ref) => {
+export const Timeline = forwardRef<HTMLDivElement, TimelineProps>(({ className, title, text, heartIcon, icon }, ref) => {
     return (
         <>
             {heartIcon ? (

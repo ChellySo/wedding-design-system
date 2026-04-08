@@ -1,4 +1,4 @@
-import * as React from "react";
+import { forwardRef } from 'react';
 import { LinkInternal } from "./LinkInternal"
 import { Logo } from "./Logo"
 import { classNames } from '../styling';
@@ -10,7 +10,7 @@ export interface NavBarProps extends React.ComponentPropsWithRef<'nav'> {
     color: 'teal' | 'white';
 }
 
-export const NavBar = React.forwardRef<HTMLElement, NavBarProps>(({ color, children, className, ...props }, ref) => {
+export const NavBar = forwardRef<HTMLElement, NavBarProps>(({ color, children, className, ...props }, ref) => {
     return (
         color === 'teal' ? (
             <nav className={classNames("text-teal-950 w-full py-8", className)} ref={ref} {...props}>

@@ -1,5 +1,4 @@
 import { type VariantProps } from 'class-variance-authority';
-import * as React from "react";
 export declare const typographyStyles: (props?: ({
     variant?: "burgundy" | "teal" | "white" | null | undefined;
     size?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl" | "8xl" | "9xl" | null | undefined;
@@ -41,4 +40,4 @@ export interface TypographyProps extends React.ComponentPropsWithRef<'p'>, Typog
      */
     children: React.ReactNode;
 }
-export declare const Typography: React.ForwardRefExoticComponent<Omit<TypographyProps, "ref"> & React.RefAttributes<HTMLElement>>;
+export declare const Typography: import("react").ForwardRefExoticComponent<Omit<TypographyProps, "ref"> & import("react").RefAttributes<HTMLElement>>;

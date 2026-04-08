@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from 'class-variance-authority';
-import * as React from "react";
+import { forwardRef } from 'react';
 import { classNames } from '../styling';
 
 export const headingStyles = cva('font-bold', {
@@ -34,7 +34,7 @@ export interface HeadingProps extends Omit<React.ComponentPropsWithRef<'h1'>, 'c
     as?: React.ElementType
 }
 
-export const Heading = React.forwardRef<HTMLElement, HeadingProps>(({ as: Component = 'h1', color, size, className, children, ...props }, ref) => {
+export const Heading = forwardRef<HTMLElement, HeadingProps>(({ as: Component = 'h1', color, size, className, children, ...props }, ref) => {
 
     return (
         <Component

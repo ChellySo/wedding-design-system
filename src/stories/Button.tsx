@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from 'class-variance-authority';
-import * as React from "react";
+import { forwardRef } from 'react';
 import { classNames } from '../styling';
 import { BASE_BUTTON_STYLES, BUTTON_STYLES } from './button-styles';
 
@@ -43,7 +43,7 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'>, Butt
 }
 
 /** Primary UI component for user interaction */
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({ variant, size, fullWidth, disabled, className, children, ...props }, ref) => {
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ variant, size, fullWidth, disabled, className, children, ...props }, ref) => {
 
   return (
     <button
