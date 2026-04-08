@@ -15,4 +15,4 @@ export const Logo = ({ color, ...props }: LogoProps) => {
         )
     )
 }
-
+Logo.displayName = 'Logo'
