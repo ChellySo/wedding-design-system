@@ -1,3 +1,4 @@
+import * as React from "react";
 import HeartWithTimelineIcon from "../Icons/HeartIcon"
 import { Typography } from "../stories/Typography"
 import { classNames } from "../styling"
@@ -11,12 +12,12 @@ export interface TimelineProps {
     heartIcon?: boolean
 }
 
-export const Timeline = ({ className, title, text, heartIcon, icon }: TimelineProps) => {
+export const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(({ className, title, text, heartIcon, icon }, ref) => {
     return (
         <>
             {heartIcon ? (
 
-                <div className={classNames(className, 'grid grid-cols-[auto_1px_1fr] gap-4 items-start')}>
+                <div className={classNames(className, 'grid grid-cols-[auto_1px_1fr] gap-4 items-start')} ref={ref}>
                     <div className="flex justify-center mr-4 self-center">
                         {icon}
                     </div>
@@ -44,3 +45,5 @@ export const Timeline = ({ className, title, text, heartIcon, icon }: TimelinePr
         </>
     )
 }
+)
+Timeline.displayName = 'Timeline'
