@@ -36,4 +36,9 @@
     "src/**/*",
     "./global.d.ts"
   ],
+  "exclude": [
+    "**/*.stories.ts",
+    "**/*.stories.tsx",
+    "src/**/*.stories.*"
+  ]
 }
