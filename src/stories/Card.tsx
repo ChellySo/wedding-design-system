@@ -7,19 +7,19 @@ import { LinkInternal } from "./LinkInternal";
 export interface CardProps {
     className?: string
     size: 'sm' | 'lg'
-    image?: React.ReactElement
+    imageSrc?: string
     title?: string
     children?: React.ReactElement
     buttonText?: string
     hrefButtonLink?: string
 }
 
-export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, image, title, children, size, buttonText, hrefButtonLink }, ref) => {
+export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc, title, children, size, buttonText, hrefButtonLink }, ref) => {
     return (
         <div className={classNames(className, `${size === 'sm' ? 'max-w-sm' : 'max-w-2xl'}`, 'bg-white place-items-center shadow-md rounded-sm ')} ref={ref}>
-            {image &&
+            {imageSrc &&
                 <div className="w-fit mb-4">
-                    {image}
+                    <img className='w-full object-cover' src={imageSrc} alt='' />
                 </div>
             }
             <div className="p-4 mb-4 text-center justify-items-center">
