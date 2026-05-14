@@ -1,7 +1,7 @@
 export interface CardProps {
     className?: string;
     size: 'sm' | 'lg';
-    image?: React.ReactElement;
+    imageSrc?: string;
     title?: string;
     children?: React.ReactElement;
     buttonText?: string;
