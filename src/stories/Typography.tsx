@@ -81,7 +81,7 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(({ as: Compon
     return (
         <Component
             ref={ref}
-            className={classNames(className, typographyStyles({ variant, size, className }))}
+            className={classNames(typographyStyles({ variant, size }), className)}
             {...props}
         >
             {children}
