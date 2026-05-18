@@ -16,21 +16,23 @@ export interface CardProps {
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc, title, children, size, buttonText, hrefButtonLink }, ref) => {
     return (
-        <div className={classNames(className, `${size === 'sm' ? 'max-w-sm' : 'max-w-2xl'}`, 'bg-white place-items-center shadow-md rounded-sm ')} ref={ref}>
+        <div className={classNames(className, `${size === 'sm' ? 'max-w-sm' : 'max-w-2xl'}`, 'bg-white place-items-center shadow-md rounded-sm flex flex-col h-full')} ref={ref}>
             {imageSrc &&
-                <div className="w-fit mb-4">
-                    <img className='w-full object-cover' src={imageSrc} alt='' />
+                <div className="h-70 overflow-hidden">
+                    <img className='w-full h-full object-cover' src={imageSrc} alt='' />
                 </div>
             }
-            <div className="p-4 mb-4 text-center justify-items-center">
+            <div className="p-4 text-center justify-items-center flex flex-col flex-1">
                 {title &&
                     <Heading className="mb-4" size='h1' color='teal'>{title}</Heading>
                 }
 
-                {children}
+                <div className="flex-1 my-4">
+                    {children}
+                </div>
 
                 {buttonText &&
-                    <div className="mt-4 justify-items-center">
+                    <div className="mt-auto pt-4 justify-items-center">
                         <Button variant='primary' size='lg'>
                             <LinkInternal href={hrefButtonLink || '/'}>
                                 {buttonText}
