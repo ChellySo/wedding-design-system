@@ -18,7 +18,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc
     return (
         <div className={classNames(className, `${size === 'sm' ? 'max-w-sm' : 'max-w-2xl'}`, 'bg-white place-items-center shadow-md rounded-sm flex flex-col h-full')} ref={ref}>
             {imageSrc &&
-                <div className="h-70 overflow-hidden">
+                <div className="lg:h-70 md:h-57 h-70 overflow-hidden">
                     <img className='w-full h-full object-cover' src={imageSrc} alt='' />
                 </div>
             }
