@@ -37,22 +37,22 @@ export const Countdown = forwardRef<HTMLDivElement, CountdownProps>(({ weddingDa
         <div className={classNames("bg-burgundy-950 w-full", className)} ref={ref} {...props}>
             {timeLeft.days < 0 ? (
                 <div className="mx-auto justify-center text-center py-24">
-                    <Typography variant="white" className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">WEDDING TIME!</Typography>
+                    <Typography variant="white" className="font-semibold text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">WEDDING TIME!</Typography>
                 </div>
             ) : (
                 <>
-                    <Typography variant="white" className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl justify-center text-center py-12">Counting down to our wedding day</Typography>
+                    <Typography variant="white" className="font-semibold text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl justify-center text-center py-12">Counting down to our wedding day</Typography>
                     <div className="mx-auto grid grid-cols-4 gap-2 md:gap-4 xl:gap-6 justify-center text-center">
-                        <Typography variant="white" className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">{timeLeft.days}</Typography>
-                        <Typography variant="white" className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">{timeLeft.hours}</Typography>
-                        <Typography variant="white" className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">{timeLeft.minutes}</Typography>
-                        <Typography variant="white" className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">{timeLeft.seconds}</Typography>
+                        <Typography variant="white" className="font-semibold text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">{timeLeft.days}</Typography>
+                        <Typography variant="white" className="font-semibold text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">{timeLeft.hours}</Typography>
+                        <Typography variant="white" className="font-semibold text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">{timeLeft.minutes}</Typography>
+                        <Typography variant="white" className="font-semibold text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">{timeLeft.seconds}</Typography>
                     </div>
                     <div className="mx-auto grid grid-cols-4 gap-2 md:gap-4 xl:gap-6 justify-center text-center py-12">
-                        <Typography variant="white" className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">days </Typography>
-                        <Typography variant="white" className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">hours </Typography>
-                        <Typography variant="white" className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">minutes </Typography>
-                        <Typography variant="white" className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">seconds </Typography>
+                        <Typography variant="white" className="font-semibold text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">days </Typography>
+                        <Typography variant="white" className="font-semibold text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">hours </Typography>
+                        <Typography variant="white" className="font-semibold text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">minutes </Typography>
+                        <Typography variant="white" className="font-semibold text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">seconds </Typography>
                     </div>
                 </>
             )}

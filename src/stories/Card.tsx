@@ -16,7 +16,7 @@ export interface CardProps {
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc, title, children, size, buttonText, hrefButtonLink }, ref) => {
     return (
-        <div className={classNames(className, `${size === 'sm' ? 'max-w-sm' : 'max-w-2xl'}`, 'bg-white place-items-center shadow-md rounded-sm flex flex-col h-full')} ref={ref}>
+        <div className={classNames(className, `${size === 'sm' ? 'max-w-sm' : 'max-w-2xl'}`, 'w-full bg-white shadow-md rounded-sm flex flex-col h-full')} ref={ref}>
             {imageSrc &&
                 <div className="lg:h-70 md:h-57 h-70 overflow-hidden">
                     <img className='w-full h-full object-cover' src={imageSrc} alt='' />
