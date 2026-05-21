@@ -2,7 +2,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { forwardRef } from 'react';
 import { classNames } from '../styling';
 
-export const typographyStyles = cva('font-medium', {
+export const typographyStyles = cva('font-normal', {
     variants: {
         variant: {
             burgundy: 'text-burgundy-950',
