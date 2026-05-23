@@ -17,11 +17,11 @@ export const Timeline = forwardRef<HTMLDivElement, TimelineProps>(({ className, 
         <>
             {heartIcon ? (
 
-                <div className={classNames(className, 'grid grid-cols-[auto_1px_1fr] gap-4 items-start')} ref={ref}>
-                    <div className="flex justify-center mr-4 self-center">
+                <div className={classNames(className, 'grid grid-cols-1 sm:grid-cols-[auto_1px_1fr] gap-4 items-start')} ref={ref}>
+                    <div className="hidden sm:flex justify-center mr-4 self-center">
                         {icon}
                     </div>
-                    <div className="relative flex flex-col items-center h-full">
+                    <div className="hidden relative sm:flex flex-col items-center h-full">
                         <HeartWithTimelineIcon className="w-8 h-8  text-burgundy-950 z-10" />
                         <div className="bg-burgundy-950 w-[4px] flex-1" />
                     </div>
@@ -31,8 +31,8 @@ export const Timeline = forwardRef<HTMLDivElement, TimelineProps>(({ className, 
                     </div>
                 </div>
             ) : (
-                <div className={classNames(className, 'grid grid-cols-[auto_1px_1fr] gap-4 items-start')}>
-                    <div className="flex justify-center mr-4 self-center">
+                <div className={classNames(className, 'grid grid-cols-1 sm:grid-cols-[auto_1px_1fr] gap-4 items-start')} ref={ref}>
+                    <div className="hidden sm:flex justify-center mr-4 self-center">
                         {icon}
                     </div>
                     <div className="bg-burgundy-950 w-[3px] h-full" />
