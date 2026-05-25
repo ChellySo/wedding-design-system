@@ -3379,10 +3379,10 @@ s4.displayName = "Footer";
 const l4 = ({ href: e, children: o, className: t, ...r }) => /* @__PURE__ */ l.jsx("a", { href: e, className: t, target: "_blank", rel: "noopener noreferrer", ...r, children: o }), n4 = U(
   ({ color: e, children: o, className: t, ...r }, n) => e === "teal" ? /* @__PURE__ */ l.jsxs("nav", { className: P("text-teal-950 w-full py-8", t), ref: n, ...r, children: [
     /* @__PURE__ */ l.jsx(h2, { href: "/", className: "block w-fit mx-auto mb-8", children: /* @__PURE__ */ l.jsx(v2, { color: "teal" }) }),
-    /* @__PURE__ */ l.jsx("div", { className: "grid grid-flow-col auto-cols-max md:gap-20 sm:gap-14 gap-6 justify-center text-center", children: o })
+    /* @__PURE__ */ l.jsx("div", { className: "flex items-center justify-center md:gap-20 sm:gap-14 gap-6", children: o })
   ] }) : /* @__PURE__ */ l.jsxs("nav", { className: P("text-rose-white w-full py-8", t), ref: n, ...r, children: [
     /* @__PURE__ */ l.jsx(h2, { href: "/", className: "block w-fit mx-auto mb-8", children: /* @__PURE__ */ l.jsx(v2, { color: "white" }) }),
-    /* @__PURE__ */ l.jsx("div", { className: "grid grid-flow-col auto-cols-max md:gap-20 sm:gap-14 gap-6 justify-center text-center", children: o })
+    /* @__PURE__ */ l.jsx("div", { className: "flex items-center justify-center md:gap-20 sm:gap-14 gap-6", children: o })
   ] })
 );
 n4.displayName = "NavBar";
