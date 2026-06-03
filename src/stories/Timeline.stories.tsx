@@ -8,7 +8,7 @@ const meta = {
   tags: ['autodocs'],
   args: {
     title: '10:00 - 11:00',
-    text: 'A beautiful and intimate traditional ceremony to honor our families.',
+    children: 'A beautiful and intimate traditional ceremony to honor our families.',
   }
 } satisfies Meta<typeof Timeline>;
 
@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     title: '10:00 - 11:00',
-    text: 'A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families.',
+    children: 'A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families.',
     heartIcon: false,
     icon: <TeaIcon className="w-30 h-30" />
   }
@@ -26,7 +26,7 @@ export const Default: Story = {
 export const Multiple: Story = {
   args: {
     title: '10:00 - 11:00',
-    text: 'A beautiful and intimate traditional ceremony to honor our families.',
+    children: 'A beautiful and intimate traditional ceremony to honor our families.',
     heartIcon: false,
     icon: <TeaIcon className="w-30 h-30" />
   },
@@ -35,20 +35,20 @@ export const Multiple: Story = {
       <Timeline
         title="10:00 - 11:00"
         heartIcon
-        text="A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families."
+        children="A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families."
         icon={<TeaIcon className="w-30 h-30" />}
 
       />
       <Timeline
         title="11:00 - 12:00"
         heartIcon
-        text="A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families."
+        children="A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families."
         icon={<TeaIcon className="w-30 h-30" />}
       />
       <Timeline
         title="12:00 - 14:00"
         heartIcon
-        text="A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families."
+        children="A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families. A beautiful and intimate traditional ceremony to honor our families."
         icon={<TeaIcon className="w-30 h-30" />}
       />
     </>

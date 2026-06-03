@@ -3290,12 +3290,12 @@ const K1 = j2("font-bold", {
   )
 );
 g2.displayName = "Heading";
-const h2 = ({ href: e, children: o, className: t, as: r = "a", ...n }) => /* @__PURE__ */ l.jsx(r, { href: e, className: t, ...n, children: o }), e4 = U(({ className: e, imageSrc: o, title: t, children: r, size: n, buttonText: C, hrefButtonLink: a }, f) => /* @__PURE__ */ l.jsxs("div", { className: P(e, `${n === "sm" ? "max-w-sm" : "max-w-2xl"}`, "w-full bg-white shadow-md rounded-sm flex flex-col h-full"), ref: f, children: [
+const h2 = ({ href: e, children: o, className: t, as: r = "a", ...n }) => /* @__PURE__ */ l.jsx(r, { href: e, className: t, ...n, children: o }), e4 = U(({ className: e, imageSrc: o, title: t, children: r, size: n, buttonText: C, hrefButtonLink: a, disableButton: f }, d) => /* @__PURE__ */ l.jsxs("div", { className: P(e, `${n === "sm" ? "max-w-sm" : "max-w-2xl"}`, "w-full bg-white shadow-md rounded-sm flex flex-col h-full"), ref: d, children: [
   o && /* @__PURE__ */ l.jsx("div", { className: "lg:h-70 md:h-57 h-70 overflow-hidden", children: /* @__PURE__ */ l.jsx("img", { className: "w-full h-full object-cover", src: o, alt: "" }) }),
   /* @__PURE__ */ l.jsxs("div", { className: "p-4 text-center justify-items-center flex flex-col flex-1", children: [
     t && /* @__PURE__ */ l.jsx(g2, { className: "mb-4", size: "h1", color: "teal", children: t }),
     /* @__PURE__ */ l.jsx("div", { className: "flex-1 my-4", children: r }),
-    C && /* @__PURE__ */ l.jsx("div", { className: "mt-auto pt-4 justify-items-center", children: /* @__PURE__ */ l.jsx(e1, { variant: "primary", size: "lg", children: /* @__PURE__ */ l.jsx(h2, { href: a || "/", children: C }) }) })
+    C && /* @__PURE__ */ l.jsx("div", { className: "mt-auto pt-4 justify-items-center", children: /* @__PURE__ */ l.jsx(e1, { variant: "primary", size: "lg", disabled: f, children: /* @__PURE__ */ l.jsx(h2, { href: a || "/", children: C }) }) })
   ] })
 ] }));
 e4.displayName = "Card";
@@ -3389,22 +3389,22 @@ const l4 = ({ href: e, children: o, className: t, ...r }) => /* @__PURE__ */ l.j
 );
 n4.displayName = "NavBar";
 const C4 = U(
-  ({ className: e, title: o, text: t, heartIcon: r, icon: n }, C) => /* @__PURE__ */ l.jsx(l.Fragment, { children: r ? /* @__PURE__ */ l.jsxs("div", { className: P(e, "grid grid-cols-1 sm:grid-cols-[auto_1px_1fr] gap-4 items-start"), ref: C, children: [
-    /* @__PURE__ */ l.jsx("div", { className: "hidden sm:flex justify-center mr-4 self-center", children: n }),
+  ({ className: e, title: o, heartIcon: t, icon: r, children: n }, C) => /* @__PURE__ */ l.jsx(l.Fragment, { children: t ? /* @__PURE__ */ l.jsxs("div", { className: P(e, "grid grid-cols-1 sm:grid-cols-[auto_1px_1fr] gap-4 items-start"), ref: C, children: [
+    /* @__PURE__ */ l.jsx("div", { className: "hidden sm:flex justify-center mr-4 self-center", children: r }),
     /* @__PURE__ */ l.jsxs("div", { className: "hidden relative sm:flex flex-col items-center h-full", children: [
       /* @__PURE__ */ l.jsx(a1, { className: "w-8 h-8  text-burgundy-950 z-10" }),
       /* @__PURE__ */ l.jsx("div", { className: "bg-burgundy-950 w-[4px] flex-1" })
     ] }),
     /* @__PURE__ */ l.jsxs("div", { className: "mb-12 mx-4", children: [
       /* @__PURE__ */ l.jsx(g2, { color: "teal", size: "h3", children: o }),
-      /* @__PURE__ */ l.jsx(O, { variant: "teal", size: "md", children: t })
+      /* @__PURE__ */ l.jsx(O, { variant: "teal", size: "md", children: n })
     ] })
   ] }) : /* @__PURE__ */ l.jsxs("div", { className: P(e, "grid grid-cols-1 sm:grid-cols-[auto_1px_1fr] gap-4 items-start"), ref: C, children: [
-    /* @__PURE__ */ l.jsx("div", { className: "hidden sm:flex justify-center mr-4 self-center", children: n }),
+    /* @__PURE__ */ l.jsx("div", { className: "hidden sm:flex justify-center mr-4 self-center", children: r }),
     /* @__PURE__ */ l.jsx("div", { className: "bg-burgundy-950 w-[3px] h-full" }),
     /* @__PURE__ */ l.jsxs("div", { className: "mb-12 mx-4", children: [
       /* @__PURE__ */ l.jsx(g2, { color: "teal", size: "h3", children: o }),
-      /* @__PURE__ */ l.jsx(O, { variant: "teal", size: "md", children: t })
+      /* @__PURE__ */ l.jsx(O, { variant: "teal", size: "md", children: n })
     ] })
   ] }) })
 );
