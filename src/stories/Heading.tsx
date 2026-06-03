@@ -10,12 +10,12 @@ export const headingStyles = cva('font-bold', {
             white: 'text-rose-white',
         },
         size: {
-            h1: 'text-4xl',
-            h2: 'text-3xl',
-            h3: 'text-2xl',
-            h4: 'text-xl',
-            h5: 'text-lg',
-            h6: 'text-base',
+            h1: 'text-2xl sm:text-4xl',
+            h2: 'text-xl sm:text-3xl',
+            h3: 'text-lg sm:text-2xl',
+            h4: 'text-lg sm:text-xl',
+            h5: 'text-base sm:text-lg',
+            h6: 'text-sm sm:text-base',
         },
     },
     defaultVariants: {
