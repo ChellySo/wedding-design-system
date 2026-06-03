@@ -6,5 +6,6 @@ export interface CardProps {
     children?: React.ReactElement;
     buttonText?: string;
     hrefButtonLink?: string;
+    disableButton?: boolean;
 }
 export declare const Card: import("react").ForwardRefExoticComponent<CardProps & import("react").RefAttributes<HTMLDivElement>>;

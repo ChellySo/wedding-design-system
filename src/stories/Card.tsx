@@ -12,9 +12,10 @@ export interface CardProps {
     children?: React.ReactElement
     buttonText?: string
     hrefButtonLink?: string
+    disableButton?: boolean
 }
 
-export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc, title, children, size, buttonText, hrefButtonLink }, ref) => {
+export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc, title, children, size, buttonText, hrefButtonLink, disableButton }, ref) => {
     return (
         <div className={classNames(className, `${size === 'sm' ? 'max-w-sm' : 'max-w-2xl'}`, 'w-full bg-white shadow-md rounded-sm flex flex-col h-full')} ref={ref}>
             {imageSrc &&
@@ -33,7 +34,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc
 
                 {buttonText &&
                     <div className="mt-auto pt-4 justify-items-center">
-                        <Button variant='primary' size='lg'>
+                        <Button variant='primary' size='lg' disabled={disableButton}>
                             <LinkInternal href={hrefButtonLink || '/'}>
                                 {buttonText}
                             </LinkInternal>

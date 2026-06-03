@@ -6,13 +6,13 @@ import { Heading } from "./Heading"
 
 export interface TimelineProps {
     title: string
-    text: string
     icon: React.ReactElement
     className?: string
     heartIcon?: boolean
+    children?: string
 }
 
-export const Timeline = forwardRef<HTMLDivElement, TimelineProps>(({ className, title, text, heartIcon, icon }, ref) => {
+export const Timeline = forwardRef<HTMLDivElement, TimelineProps>(({ className, title, heartIcon, icon, children }, ref) => {
     return (
         <>
             {heartIcon ? (
@@ -27,7 +27,7 @@ export const Timeline = forwardRef<HTMLDivElement, TimelineProps>(({ className, 
                     </div>
                     <div className="mb-12 mx-4">
                         <Heading color="teal" size="h3">{title}</Heading>
-                        <Typography variant="teal" size="md">{text}</Typography>
+                        <Typography variant="teal" size="md">{children}</Typography>
                     </div>
                 </div>
             ) : (
@@ -38,7 +38,7 @@ export const Timeline = forwardRef<HTMLDivElement, TimelineProps>(({ className, 
                     <div className="bg-burgundy-950 w-[3px] h-full" />
                     <div className="mb-12 mx-4">
                         <Heading color="teal" size="h3">{title}</Heading>
-                        <Typography variant="teal" size="md">{text}</Typography>
+                        <Typography variant="teal" size="md">{children}</Typography>
                     </div>
                 </div>
             )}
