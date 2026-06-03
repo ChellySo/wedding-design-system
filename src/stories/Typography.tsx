@@ -10,9 +10,9 @@ export const typographyStyles = cva('font-normal', {
             white: 'text-rose-white',
         },
         size: {
-            sm: 'text-sm',
-            md: 'text-base',
-            lg: 'text-lg',
+            sm: 'text-xs sm:text-sm',
+            md: 'text-sm sm:text-base',
+            lg: 'text-md sm:text-lg',
             xl: 'text-xl',
             '2xl': 'text-2xl',
             '3xl': 'text-3xl',
