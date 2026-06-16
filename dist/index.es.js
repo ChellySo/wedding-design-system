@@ -49,7 +49,7 @@ function n1() {
         switch (typeof s.tag == "number" && console.error(
           "Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."
         ), s.$$typeof) {
-          case _:
+          case E:
             return "Portal";
           case D:
             return s.displayName || "Context";
@@ -60,7 +60,7 @@ function n1() {
             return s = s.displayName, s || (s = x.displayName || x.name || "", s = s !== "" ? "ForwardRef(" + s + ")" : "ForwardRef"), s;
           case m:
             return x = s.displayName || null, x !== null ? x : e(s.type) || "Memo";
-          case E:
+          case _:
             x = s._payload, s = s._init;
             try {
               return e(s(x));
@@ -91,7 +91,7 @@ function n1() {
     }
     function r(s) {
       if (s === y) return "<>";
-      if (typeof s == "object" && s !== null && s.$$typeof === E)
+      if (typeof s == "object" && s !== null && s.$$typeof === _)
         return "<...>";
       try {
         var x = e(s);
@@ -214,12 +214,12 @@ React keys must be passed directly to JSX without using spread:
       );
     }
     function N(s) {
-      h(s) ? s._store && (s._store.validated = 1) : typeof s == "object" && s !== null && s.$$typeof === E && (s._payload.status === "fulfilled" ? h(s._payload.value) && s._payload.value._store && (s._payload.value._store.validated = 1) : s._store && (s._store.validated = 1));
+      h(s) ? s._store && (s._store.validated = 1) : typeof s == "object" && s !== null && s.$$typeof === _ && (s._payload.status === "fulfilled" ? h(s._payload.value) && s._payload.value._store && (s._payload.value._store.validated = 1) : s._store && (s._store.validated = 1));
     }
     function h(s) {
       return typeof s == "object" && s !== null && s.$$typeof === S;
     }
-    var A = t1, S = /* @__PURE__ */ Symbol.for("react.transitional.element"), _ = /* @__PURE__ */ Symbol.for("react.portal"), y = /* @__PURE__ */ Symbol.for("react.fragment"), L = /* @__PURE__ */ Symbol.for("react.strict_mode"), K = /* @__PURE__ */ Symbol.for("react.profiler"), q = /* @__PURE__ */ Symbol.for("react.consumer"), D = /* @__PURE__ */ Symbol.for("react.context"), W = /* @__PURE__ */ Symbol.for("react.forward_ref"), F = /* @__PURE__ */ Symbol.for("react.suspense"), J = /* @__PURE__ */ Symbol.for("react.suspense_list"), m = /* @__PURE__ */ Symbol.for("react.memo"), E = /* @__PURE__ */ Symbol.for("react.lazy"), l2 = /* @__PURE__ */ Symbol.for("react.activity"), i2 = /* @__PURE__ */ Symbol.for("react.client.reference"), B = A.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, o2 = Object.prototype.hasOwnProperty, s2 = Array.isArray, Z = console.createTask ? console.createTask : function() {
+    var A = t1, S = /* @__PURE__ */ Symbol.for("react.transitional.element"), E = /* @__PURE__ */ Symbol.for("react.portal"), y = /* @__PURE__ */ Symbol.for("react.fragment"), L = /* @__PURE__ */ Symbol.for("react.strict_mode"), K = /* @__PURE__ */ Symbol.for("react.profiler"), q = /* @__PURE__ */ Symbol.for("react.consumer"), D = /* @__PURE__ */ Symbol.for("react.context"), W = /* @__PURE__ */ Symbol.for("react.forward_ref"), F = /* @__PURE__ */ Symbol.for("react.suspense"), J = /* @__PURE__ */ Symbol.for("react.suspense_list"), m = /* @__PURE__ */ Symbol.for("react.memo"), _ = /* @__PURE__ */ Symbol.for("react.lazy"), l2 = /* @__PURE__ */ Symbol.for("react.activity"), i2 = /* @__PURE__ */ Symbol.for("react.client.reference"), B = A.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, o2 = Object.prototype.hasOwnProperty, s2 = Array.isArray, Z = console.createTask ? console.createTask : function() {
       return null;
     };
     A = {
@@ -254,9 +254,9 @@ React keys must be passed directly to JSX without using spread:
     };
   })()), C2;
 }
-var _2;
+var E2;
 function C1() {
-  return _2 || (_2 = 1, process.env.NODE_ENV === "production" ? f2.exports = s1() : f2.exports = n1()), f2.exports;
+  return E2 || (E2 = 1, process.env.NODE_ENV === "production" ? f2.exports = s1() : f2.exports = n1()), f2.exports;
 }
 var l = C1();
 const a1 = ({ ...e }) => /* @__PURE__ */ l.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "#58131B", version: "1.1", id: "Capa_1", width: "800px", height: "800px", viewBox: "0 0 378.94 378.94", ...e, children: /* @__PURE__ */ l.jsx("g", { children: /* @__PURE__ */ l.jsx("path", { d: "M348.151,54.514c-19.883-19.884-46.315-30.826-74.435-30.826c-28.124,0-54.559,10.942-74.449,30.826l-9.798,9.8l-9.798-9.8   c-19.884-19.884-46.325-30.826-74.443-30.826c-28.117,0-54.56,10.942-74.442,30.826c-41.049,41.053-41.049,107.848,0,148.885   l147.09,147.091c2.405,2.414,5.399,3.892,8.527,4.461c1.049,0.207,2.104,0.303,3.161,0.303c4.161,0,8.329-1.587,11.498-4.764   l147.09-147.091C389.203,162.362,389.203,95.567,348.151,54.514z M325.155,180.404L189.47,316.091L53.782,180.404   c-28.368-28.364-28.368-74.514,0-102.893c13.741-13.739,32.017-21.296,51.446-21.296c19.431,0,37.702,7.557,51.438,21.296   l21.305,21.312c6.107,6.098,16.897,6.098,23.003,0l21.297-21.312c13.737-13.739,32.009-21.296,51.446-21.296   c19.431,0,37.701,7.557,51.438,21.296C353.526,105.89,353.526,152.039,325.155,180.404z" }) }) });
@@ -273,13 +273,13 @@ function F2() {
   for (var e, o, t = 0, r = "", n = arguments.length; t < n; t++) (e = arguments[t]) && (o = L2(e)) && (r && (r += " "), r += o);
   return r;
 }
-const E2 = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, A2 = F2, j2 = (e, o) => (t) => {
+const _2 = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, A2 = F2, j2 = (e, o) => (t) => {
   var r;
   if (o?.variants == null) return A2(e, t?.class, t?.className);
   const { variants: n, defaultVariants: C } = o, a = Object.keys(n).map((b) => {
     const g = t?.[b], N = C?.[b];
     if (g === null) return null;
-    const h = E2(g) || E2(N);
+    const h = _2(g) || _2(N);
     return n[b][h];
   }), f = t && Object.entries(t).reduce((b, g) => {
     let [N, h] = g;
@@ -287,14 +287,14 @@ const E2 = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, A2 = F2, j
   }, {}), d = o == null || (r = o.compoundVariants) === null || r === void 0 ? void 0 : r.reduce((b, g) => {
     let { class: N, className: h, ...A } = g;
     return Object.entries(A).every((S) => {
-      let [_, y] = S;
+      let [E, y] = S;
       return Array.isArray(y) ? y.includes({
         ...C,
         ...f
-      }[_]) : {
+      }[E]) : {
         ...C,
         ...f
-      }[_] === y;
+      }[E] === y;
     }) ? [
       ...b,
       N,
@@ -448,15 +448,15 @@ const E2 = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, A2 = F2, j
     const C = [];
     let a = 0, f = 0, d = 0, b;
     const g = n.length;
-    for (let _ = 0; _ < g; _++) {
-      const y = n[_];
+    for (let E = 0; E < g; E++) {
+      const y = n[E];
       if (a === 0 && f === 0) {
         if (y === z2) {
-          C.push(n.slice(d, _)), d = _ + 1;
+          C.push(n.slice(d, E)), d = E + 1;
           continue;
         }
         if (y === "/") {
-          b = _;
+          b = E;
           continue;
         }
       }
@@ -518,13 +518,13 @@ const E2 = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, A2 = F2, j
       modifiers: h,
       hasImportantModifier: A,
       baseClassName: S,
-      maybePostfixModifierPosition: _
+      maybePostfixModifierPosition: E
     } = t(g);
     if (N) {
       d = g + (d.length > 0 ? " " + d : d);
       continue;
     }
-    let y = !!_, L = r(y ? S.substring(0, _) : S);
+    let y = !!E, L = r(y ? S.substring(0, E) : S);
     if (!L) {
       if (!y) {
         d = g + (d.length > 0 ? " " + d : d);
@@ -573,10 +573,10 @@ const E2 = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, A2 = F2, j
     return n(d, g), g;
   };
   return C = a, (...d) => C(R1(...d));
-}, _1 = [], T = (e) => {
-  const o = (t) => t[e] || _1;
+}, E1 = [], T = (e) => {
+  const o = (t) => t[e] || E1;
   return o.isThemeGetter = !0, o;
-}, B2 = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, Y2 = /^\((?:(\w[\w-]*):)?(.+)\)$/i, E1 = /^\d+(?:\.\d+)?\/\d+(?:\.\d+)?$/, A1 = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, S1 = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, z1 = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix)\(.+\)$/, P1 = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, O1 = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, Y = (e) => E1.test(e), p = (e) => !!e && !Number.isNaN(Number(e)), $ = (e) => !!e && Number.isInteger(Number(e)), y2 = (e) => e.endsWith("%") && p(e.slice(0, -1)), G = (e) => A1.test(e), $2 = () => !0, Z1 = (e) => (
+}, B2 = /^\[(?:(\w[\w-]*):)?(.+)\]$/i, Y2 = /^\((?:(\w[\w-]*):)?(.+)\)$/i, _1 = /^\d+(?:\.\d+)?\/\d+(?:\.\d+)?$/, A1 = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/, S1 = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/, z1 = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix)\(.+\)$/, P1 = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/, O1 = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/, Y = (e) => _1.test(e), p = (e) => !!e && !Number.isNaN(Number(e)), $ = (e) => !!e && Number.isInteger(Number(e)), y2 = (e) => e.endsWith("%") && p(e.slice(0, -1)), G = (e) => A1.test(e), $2 = () => !0, Z1 = (e) => (
   // `colorFunctionRegex` check is necessary because color functions can have percentages in them which which would be incorrectly classified as lengths.
   // For example, `hsl(0 0% 0%)` would be classified as a length without this check.
   // I could also use lookbehind assertion in `lengthUnitRegex` but that isn't supported widely enough.
@@ -588,7 +588,7 @@ const E2 = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, A2 = F2, j
   const r = Y2.exec(e);
   return r ? r[1] ? o(r[1]) : t : !1;
 }, U2 = (e) => e === "position" || e === "percentage", H2 = (e) => e === "image" || e === "url", q2 = (e) => e === "length" || e === "size" || e === "bg-size", J2 = (e) => e === "length", H1 = (e) => e === "number", X2 = (e) => e === "family-name", Q2 = (e) => e === "number" || e === "weight", K2 = (e) => e === "shadow", q1 = () => {
-  const e = T("color"), o = T("font"), t = T("text"), r = T("font-weight"), n = T("tracking"), C = T("leading"), a = T("breakpoint"), f = T("container"), d = T("spacing"), b = T("radius"), g = T("shadow"), N = T("inset-shadow"), h = T("text-shadow"), A = T("drop-shadow"), S = T("blur"), _ = T("perspective"), y = T("aspect"), L = T("ease"), K = T("animate"), q = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], D = () => [
+  const e = T("color"), o = T("font"), t = T("text"), r = T("font-weight"), n = T("tracking"), C = T("leading"), a = T("breakpoint"), f = T("container"), d = T("spacing"), b = T("radius"), g = T("shadow"), N = T("inset-shadow"), h = T("text-shadow"), A = T("drop-shadow"), S = T("blur"), E = T("perspective"), y = T("aspect"), L = T("ease"), K = T("animate"), q = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], D = () => [
     "center",
     "top",
     "bottom",
@@ -606,7 +606,7 @@ const E2 = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, A2 = F2, j
     "bottom-left",
     // Deprecated since Tailwind CSS v4.1.0, see https://github.com/tailwindlabs/tailwindcss/pull/17378
     "left-bottom"
-  ], W = () => [...D(), c, i], F = () => ["auto", "hidden", "clip", "visible", "scroll"], J = () => ["auto", "contain", "none"], m = () => [c, i, d], E = () => [Y, "full", "auto", ...m()], l2 = () => [$, "none", "subgrid", c, i], i2 = () => ["auto", {
+  ], W = () => [...D(), c, i], F = () => ["auto", "hidden", "clip", "visible", "scroll"], J = () => ["auto", "contain", "none"], m = () => [c, i, d], _ = () => [Y, "full", "auto", ...m()], l2 = () => [$, "none", "subgrid", c, i], i2 = () => ["auto", {
     span: ["full", $, c, i]
   }, $, c, i], B = () => [$, "auto", c, i], o2 = () => ["auto", "min", "max", "fr", c, i], s2 = () => ["start", "end", "center", "between", "around", "evenly", "stretch", "baseline", "center-safe", "end-safe"], Z = () => ["start", "end", "center", "stretch", "center-safe", "end-safe"], z = () => ["auto", ...m()], I = () => [Y, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...m()], e2 = () => [Y, "screen", "full", "dvw", "lvw", "svw", "min", "max", "fit", ...m()], t2 = () => [Y, "screen", "full", "lh", "dvh", "lvh", "svh", "min", "max", "fit", ...m()], u = () => [e, c, i], s = () => [...D(), I2, Z2, {
     position: [c, i]
@@ -807,21 +807,21 @@ const E2 = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, A2 = F2, j
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       inset: [{
-        inset: E()
+        inset: _()
       }],
       /**
        * Inset Inline
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       "inset-x": [{
-        "inset-x": E()
+        "inset-x": _()
       }],
       /**
        * Inset Block
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       "inset-y": [{
-        "inset-y": E()
+        "inset-y": _()
       }],
       /**
        * Inset Inline Start
@@ -829,12 +829,12 @@ const E2 = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, A2 = F2, j
        * @todo class group will be renamed to `inset-s` in next major release
        */
       start: [{
-        "inset-s": E(),
+        "inset-s": _(),
         /**
          * @deprecated since Tailwind CSS v4.2.0 in favor of `inset-s-*` utilities.
          * @see https://github.com/tailwindlabs/tailwindcss/pull/19613
          */
-        start: E()
+        start: _()
       }],
       /**
        * Inset Inline End
@@ -842,54 +842,54 @@ const E2 = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, A2 = F2, j
        * @todo class group will be renamed to `inset-e` in next major release
        */
       end: [{
-        "inset-e": E(),
+        "inset-e": _(),
         /**
          * @deprecated since Tailwind CSS v4.2.0 in favor of `inset-e-*` utilities.
          * @see https://github.com/tailwindlabs/tailwindcss/pull/19613
          */
-        end: E()
+        end: _()
       }],
       /**
        * Inset Block Start
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       "inset-bs": [{
-        "inset-bs": E()
+        "inset-bs": _()
       }],
       /**
        * Inset Block End
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       "inset-be": [{
-        "inset-be": E()
+        "inset-be": _()
       }],
       /**
        * Top
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       top: [{
-        top: E()
+        top: _()
       }],
       /**
        * Right
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       right: [{
-        right: E()
+        right: _()
       }],
       /**
        * Bottom
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       bottom: [{
-        bottom: E()
+        bottom: _()
       }],
       /**
        * Left
        * @see https://tailwindcss.com/docs/top-right-bottom-left
        */
       left: [{
-        left: E()
+        left: _()
       }],
       /**
        * Visibility
@@ -2693,7 +2693,7 @@ const E2 = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, A2 = F2, j
        * @see https://tailwindcss.com/docs/perspective
        */
       perspective: [{
-        perspective: [_, c, i]
+        perspective: [E, c, i]
       }],
       /**
        * Perspective Origin
@@ -3340,8 +3340,8 @@ O.displayName = "Typography";
 const r4 = U(
   ({ weddingDate: e, className: o, ...t }, r) => {
     const n = () => {
-      const d = /* @__PURE__ */ new Date(), b = new Date(e), g = d.getTime(), h = b.getTime() - g, A = Math.floor(h / (1e3 * 60 * 60 * 24)), S = Math.floor(h % (1e3 * 60 * 60 * 24) / (1e3 * 60 * 60)), _ = Math.floor(h % (1e3 * 60 * 60) / (1e3 * 60)), y = Math.floor(h % (1e3 * 60) / 1e3);
-      return { days: A, hours: S, minutes: _, seconds: y };
+      const d = /* @__PURE__ */ new Date(), b = new Date(e), g = d.getTime(), h = b.getTime() - g, A = Math.floor(h / (1e3 * 60 * 60 * 24)), S = Math.floor(h % (1e3 * 60 * 60 * 24) / (1e3 * 60 * 60)), E = Math.floor(h % (1e3 * 60 * 60) / (1e3 * 60)), y = Math.floor(h % (1e3 * 60) / 1e3);
+      return { days: A, hours: S, minutes: E, seconds: y };
     }, [C, a] = r1(n());
     o1(() => {
       const d = setInterval(() => {
@@ -3389,24 +3389,26 @@ const l4 = ({ href: e, children: o, className: t, ...r }) => /* @__PURE__ */ l.j
 );
 n4.displayName = "NavBar";
 const C4 = U(
-  ({ className: e, title: o, heartIcon: t, icon: r, children: n }, C) => /* @__PURE__ */ l.jsx(l.Fragment, { children: t ? /* @__PURE__ */ l.jsxs("div", { className: P(e, "grid grid-cols-1 sm:grid-cols-[auto_1px_1fr] gap-4 items-start"), ref: C, children: [
-    /* @__PURE__ */ l.jsx("div", { className: "hidden sm:flex justify-center mr-4 self-center", children: r }),
-    /* @__PURE__ */ l.jsxs("div", { className: "hidden relative sm:flex flex-col items-center h-full", children: [
-      /* @__PURE__ */ l.jsx(a1, { className: "w-8 h-8  text-burgundy-950 z-10" }),
-      /* @__PURE__ */ l.jsx("div", { className: "bg-burgundy-950 w-[4px] flex-1" })
+  ({ className: e, title: o, icon: t, children: r }, n) => /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
+    /* @__PURE__ */ l.jsxs("div", { className: P(e, "sm:grid hidden grid-cols-[auto_1px_1fr] gap-4 items-start"), ref: n, children: [
+      /* @__PURE__ */ l.jsx("div", { className: "hidden sm:flex justify-center mr-4 self-center", children: t }),
+      /* @__PURE__ */ l.jsx("div", { className: "bg-burgundy-950 w-[3px] h-full" }),
+      /* @__PURE__ */ l.jsxs("div", { className: "mb-12 mx-4", children: [
+        /* @__PURE__ */ l.jsx(g2, { color: "teal", size: "h3", children: o }),
+        /* @__PURE__ */ l.jsx(O, { variant: "teal", size: "md", children: r })
+      ] })
     ] }),
-    /* @__PURE__ */ l.jsxs("div", { className: "mb-12 mx-4", children: [
-      /* @__PURE__ */ l.jsx(g2, { color: "teal", size: "h3", children: o }),
-      /* @__PURE__ */ l.jsx(O, { variant: "teal", size: "md", children: n })
+    /* @__PURE__ */ l.jsxs("div", { className: P(e, "sm:hidden grid grid-cols-[auto_1fr] items-start"), ref: n, children: [
+      /* @__PURE__ */ l.jsxs("div", { className: "relative flex flex-col items-center h-full", children: [
+        /* @__PURE__ */ l.jsx(a1, { className: "w-8 h-8  text-burgundy-950 z-10" }),
+        /* @__PURE__ */ l.jsx("div", { className: "bg-burgundy-950 w-[4px] flex-1" })
+      ] }),
+      /* @__PURE__ */ l.jsxs("div", { className: "mb-12 mx-4", children: [
+        /* @__PURE__ */ l.jsx(g2, { color: "teal", size: "h3", children: o }),
+        /* @__PURE__ */ l.jsx(O, { variant: "teal", size: "md", children: r })
+      ] })
     ] })
-  ] }) : /* @__PURE__ */ l.jsxs("div", { className: P(e, "grid grid-cols-1 sm:grid-cols-[auto_1px_1fr] gap-4 items-start"), ref: C, children: [
-    /* @__PURE__ */ l.jsx("div", { className: "hidden sm:flex justify-center mr-4 self-center", children: r }),
-    /* @__PURE__ */ l.jsx("div", { className: "bg-burgundy-950 w-[3px] h-full" }),
-    /* @__PURE__ */ l.jsxs("div", { className: "mb-12 mx-4", children: [
-      /* @__PURE__ */ l.jsx(g2, { color: "teal", size: "h3", children: o }),
-      /* @__PURE__ */ l.jsx(O, { variant: "teal", size: "md", children: n })
-    ] })
-  ] }) })
+  ] })
 );
 C4.displayName = "Timeline";
 export {
