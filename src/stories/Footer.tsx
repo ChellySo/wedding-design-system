@@ -12,7 +12,7 @@ export interface FooterProps {
 
 export const Footer = forwardRef<HTMLElement, FooterProps>(({ children, logoShortName, className, ...props }, ref) => {
     return (
-        <footer className={classNames("bg-burgundy-950 w-full p-10", className)} ref={ref} {...props}>
+        <footer className={classNames("bg-burgundy-950 w-full py-6 sm:py-10", className)} ref={ref} {...props}>
             <LinkInternal href="/" className="block w-fit mx-auto mb-5">
                 <Logo color="white" shortName={logoShortName} />
             </LinkInternal>
