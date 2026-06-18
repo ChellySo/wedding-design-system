@@ -19,6 +19,20 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+export const TealShort: Story = {
+    args: {
+        color: 'teal',
+        shortName: true,
+    },
+}
+
+export const WhiteShort: Story = {
+    args: {
+        color: 'white',
+        shortName: true,
+    },
+}
+
 export const Teal: Story = {
     args: {
         color: 'teal',
