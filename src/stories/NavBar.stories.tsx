@@ -25,6 +25,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         color: 'teal',
+        logoShortName: true,
         children:
             <>
                 <LinkInternal href='/' className="hover:underline hover:text-burgundy-950">Home</LinkInternal>
