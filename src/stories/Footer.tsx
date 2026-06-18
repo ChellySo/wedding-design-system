@@ -7,13 +7,14 @@ import { Logo } from "./Logo";
 export interface FooterProps {
     className?: string;
     children?: React.ReactNode
+    logoShortName?: boolean;
 }
 
-export const Footer = forwardRef<HTMLElement, FooterProps>(({ children, className, ...props }, ref) => {
+export const Footer = forwardRef<HTMLElement, FooterProps>(({ children, logoShortName, className, ...props }, ref) => {
     return (
         <footer className={classNames("bg-burgundy-950 w-full p-10", className)} ref={ref} {...props}>
             <LinkInternal href="/" className="block w-fit mx-auto mb-5">
-                <Logo color="white" />
+                <Logo color="white" shortName={logoShortName} />
             </LinkInternal>
             <div className='justify-items-center mt-2'>
                 <DateLogo />
