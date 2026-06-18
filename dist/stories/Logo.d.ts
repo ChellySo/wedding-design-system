@@ -1,7 +1,8 @@
 export interface LogoProps {
     color: 'teal' | 'white';
+    shortName?: boolean;
 }
 export declare const Logo: {
-    ({ color, ...props }: LogoProps): import("react/jsx-runtime").JSX.Element;
+    ({ color, shortName, ...props }: LogoProps): import("react/jsx-runtime").JSX.Element;
     displayName: string;
 };

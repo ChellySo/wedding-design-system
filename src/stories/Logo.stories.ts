@@ -30,3 +30,17 @@ export const White: Story = {
         color: 'white',
     },
 }
+
+export const TealShortName: Story = {
+    args: {
+        color: 'teal',
+        shortName: true,
+    },
+}
+
+export const WhiteShortName: Story = {
+    args: {
+        color: 'white',
+        shortName: true,
+    },
+}
