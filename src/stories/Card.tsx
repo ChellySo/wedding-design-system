@@ -23,17 +23,17 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc
                     <img className='w-full h-full object-cover' src={imageSrc} alt='' />
                 </div>
             }
-            <div className="p-4 text-center justify-items-center flex flex-col flex-1">
+            <div className="p-4 text-center items-center flex flex-col flex-1">
                 {title &&
                     <Heading className="mb-4" size='h1' color='teal'>{title}</Heading>
                 }
 
-                <div className="flex-1 my-4">
+                <div className="flex-1 my-4 w-full">
                     {children}
                 </div>
 
                 {buttonText &&
-                    <div className="mt-auto pt-4 justify-items-center">
+                    <div className="mt-auto pt-4 flex justify-center">
                         <Button variant='primary' size='lg' disabled={disableButton}>
                             <LinkInternal href={hrefButtonLink || '/'}>
                                 {buttonText}
