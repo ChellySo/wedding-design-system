@@ -3372,9 +3372,9 @@ const r3 = () => /* @__PURE__ */ a.jsx("svg", { viewBox: "0 0 124 20", className
 v2.displayName = "Logo";
 const o3 = H(
   ({ children: C, logoShortName: r, className: e, ...t }, s) => /* @__PURE__ */ a.jsxs("footer", { className: z("bg-[linear-gradient(to_bottom,#58131B_11%,#FCFBFB_95%,#FCFBFB_100%)] w-full pt-6 pb-10 sm:pb-20 sm:pt-12", e), ref: s, ...t, children: [
-    /* @__PURE__ */ a.jsx(h2, { href: "/", className: "block w-fit mx-auto mb-5", children: /* @__PURE__ */ a.jsx(v2, { color: "white", shortName: r }) }),
+    /* @__PURE__ */ a.jsx(h2, { href: "/", className: "block w-fit mx-auto mb-6", children: /* @__PURE__ */ a.jsx(v2, { color: "white", shortName: r }) }),
     /* @__PURE__ */ a.jsx("div", { className: "mx-auto w-fit mt-2", children: /* @__PURE__ */ a.jsx(r3, {}) }),
-    /* @__PURE__ */ a.jsx("div", { className: "grid grid-flow-col auto-cols-max md:gap-20 sm:gap-14 gap-6 justify-center text-center mt-16 mb-6", children: C })
+    /* @__PURE__ */ a.jsx("div", { className: "grid grid-flow-col auto-cols-max md:gap-20 sm:gap-14 gap-6 justify-center text-center mt-12 mb-6", children: C })
   ] })
 );
 o3.displayName = "Footer";
