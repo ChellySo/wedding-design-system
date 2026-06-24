@@ -19,7 +19,7 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(({ children, logoShor
             <div className='mx-auto w-fit mt-2'>
                 <DateLogo />
             </div>
-            <div className='grid grid-flow-col auto-cols-max md:gap-20 sm:gap-14 gap-6 justify-center text-center mt-12 mb-6'>
+            <div className='grid grid-flow-col auto-cols-max md:gap-20 sm:gap-14 gap-6 justify-center text-center mt-8 mb-6'>
                 {children}
             </div>
         </footer>
