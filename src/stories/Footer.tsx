@@ -16,7 +16,7 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(({ children, logoShor
             <LinkInternal href="/" className="block w-fit mx-auto mb-5">
                 <Logo color="white" shortName={logoShortName} />
             </LinkInternal>
-            <div className='justify-items-center mt-2'>
+            <div className='mx-auto w-fit mt-2'>
                 <DateLogo />
             </div>
             <div className='grid grid-flow-col auto-cols-max md:gap-20 sm:gap-14 gap-6 justify-center text-center mt-16'>
