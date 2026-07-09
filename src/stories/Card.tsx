@@ -14,10 +14,10 @@ export interface CardProps {
     buttonText?: string
     hrefButtonLink?: string
     disableButton?: boolean
-    ExternalLink?: boolean
+    externalLink?: boolean
 }
 
-export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc, title, children, size, buttonText, hrefButtonLink, disableButton, ExternalLink }, ref) => {
+export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc, title, children, size, buttonText, hrefButtonLink, disableButton, externalLink }, ref) => {
     return (
         <div className={classNames(className, `${size === 'sm' ? 'max-w-sm' : 'max-w-2xl'}`, 'w-full bg-white shadow-md rounded-sm flex flex-col h-full')} ref={ref}>
             {imageSrc &&
@@ -38,7 +38,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc
                     <div className="mt-auto pt-4 flex justify-center">
                         <Button variant='primary' size='lg' disabled={disableButton}>
 
-                            {ExternalLink ? (
+                            {externalLink ? (
                                 <LinkExternal href={hrefButtonLink || '/'}>
                                     {buttonText}
                                 </LinkExternal>
