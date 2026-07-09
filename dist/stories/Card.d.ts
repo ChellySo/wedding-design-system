@@ -7,5 +7,6 @@ export interface CardProps {
     buttonText?: string;
     hrefButtonLink?: string;
     disableButton?: boolean;
+    ExternalLink?: boolean;
 }
 export declare const Card: import("react").ForwardRefExoticComponent<CardProps & import("react").RefAttributes<HTMLDivElement>>;
