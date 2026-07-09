@@ -3,6 +3,7 @@ import { classNames } from "../styling";
 import { Button } from "./Button";
 import { Heading } from "./Heading";
 import { LinkInternal } from "./LinkInternal";
+import { LinkExternal } from "./LinkExternal";
 
 export interface CardProps {
     className?: string
@@ -13,9 +14,10 @@ export interface CardProps {
     buttonText?: string
     hrefButtonLink?: string
     disableButton?: boolean
+    ExternalLink?: boolean
 }
 
-export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc, title, children, size, buttonText, hrefButtonLink, disableButton }, ref) => {
+export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc, title, children, size, buttonText, hrefButtonLink, disableButton, ExternalLink }, ref) => {
     return (
         <div className={classNames(className, `${size === 'sm' ? 'max-w-sm' : 'max-w-2xl'}`, 'w-full bg-white shadow-md rounded-sm flex flex-col h-full')} ref={ref}>
             {imageSrc &&
@@ -35,9 +37,19 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(({ className, imageSrc
                 {buttonText &&
                     <div className="mt-auto pt-4 flex justify-center">
                         <Button variant='primary' size='lg' disabled={disableButton}>
-                            <LinkInternal href={hrefButtonLink || '/'}>
-                                {buttonText}
-                            </LinkInternal>
+
+                            {ExternalLink ? (
+                                <LinkExternal href={hrefButtonLink || '/'}>
+                                    {buttonText}
+                                </LinkExternal>
+                            ) : (
+                                <LinkInternal href={hrefButtonLink || '/'}>
+                                    {buttonText}
+                                </LinkInternal>
+                            )
+                            }
+
+
                         </Button>
                     </div>
                 }
