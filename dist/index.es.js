@@ -3290,7 +3290,7 @@ const K1 = M2("font-bold", {
   )
 );
 g2.displayName = "Heading";
-const h2 = ({ href: C, children: r, className: e, as: t = "a", ...s }) => /* @__PURE__ */ a.jsx(t, { href: C, className: e, ...s, children: r }), C3 = ({ href: C, children: r, className: e, ...t }) => /* @__PURE__ */ a.jsx("a", { href: C, className: e, target: "_blank", rel: "noopener noreferrer", ...t, children: r }), e3 = H(({ className: C, imageSrc: r, title: e, children: t, size: s, buttonText: n, hrefButtonLink: l, disableButton: f, ExternalLink: d }, x) => /* @__PURE__ */ a.jsxs("div", { className: z(C, `${s === "sm" ? "max-w-sm" : "max-w-2xl"}`, "w-full bg-white shadow-md rounded-sm flex flex-col h-full"), ref: x, children: [
+const h2 = ({ href: C, children: r, className: e, as: t = "a", ...s }) => /* @__PURE__ */ a.jsx(t, { href: C, className: e, ...s, children: r }), C3 = ({ href: C, children: r, className: e, ...t }) => /* @__PURE__ */ a.jsx("a", { href: C, className: e, target: "_blank", rel: "noopener noreferrer", ...t, children: r }), e3 = H(({ className: C, imageSrc: r, title: e, children: t, size: s, buttonText: n, hrefButtonLink: l, disableButton: f, externalLink: d }, x) => /* @__PURE__ */ a.jsxs("div", { className: z(C, `${s === "sm" ? "max-w-sm" : "max-w-2xl"}`, "w-full bg-white shadow-md rounded-sm flex flex-col h-full"), ref: x, children: [
   r && /* @__PURE__ */ a.jsx("div", { className: "lg:h-70 md:h-57 h-70 overflow-hidden", children: /* @__PURE__ */ a.jsx("img", { className: "w-full h-full object-cover", src: r, alt: "" }) }),
   /* @__PURE__ */ a.jsxs("div", { className: "p-4 text-center items-center flex flex-col flex-1", children: [
     e && /* @__PURE__ */ a.jsx(g2, { className: "mb-4", size: "h1", color: "teal", children: e }),
